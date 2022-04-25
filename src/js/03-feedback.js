@@ -25,7 +25,7 @@ function populateForm() {
   const parsedLsData = JSON.parse(lsData);
 
   const keys = Object.keys(parsedLsData);
-  keys.forEach(k => (formEl.elements[k].value = parsedLsData[k]));
+  keys.forEach(k => (formEl.elements[k].value = formData[k] = parsedLsData[k]));
 }
 
 function onFormSubmit(e) {
